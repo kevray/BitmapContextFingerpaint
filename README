@@ -1,0 +1,6 @@
+This is a little bit of sample code for the SO question here:
+
+http://stackoverflow.com/questions/30356584/cgcontext-color-changes-when-alpha-is-really-small
+
+This code is not optimized at all and should not be used in
+"real world" situations.
