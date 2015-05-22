@@ -53,9 +53,9 @@
 
     CGContextSaveGState(_bitmapContext);
     CGContextSetAlpha(_bitmapContext, _alpha);
-    CGContextSetLineWidth(_bitmapContext, 10);
+    CGContextSetLineWidth(_bitmapContext, 30);
     CGContextSetLineCap(_bitmapContext, kCGLineCapRound);
-    CGContextSetStrokeColorWithColor(_bitmapContext, [UIColor colorWithRed:0.4 green:0.6 blue:0.2 alpha:1].CGColor);
+    CGContextSetStrokeColorWithColor(_bitmapContext, [UIColor colorWithRed:254/255.0 green:228/255.0 blue:214/255.0 alpha:1].CGColor);
     CGContextAddPath(_bitmapContext, _path);
     CGContextDrawPath(_bitmapContext, kCGPathStroke);
     CGContextRestoreGState(_bitmapContext);
