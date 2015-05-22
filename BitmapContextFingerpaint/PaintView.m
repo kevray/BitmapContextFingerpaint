@@ -36,7 +36,7 @@
     CGImageRef image = CGBitmapContextCreateImage(_bitmapContext);
     CGContextDrawImage(context, self.bounds, image);
     CGImageRelease(image);
-    _alpha *= 0.9;
+    _alpha *= 0.99;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -44,7 +44,7 @@
     CGPathRelease(_path);
     _path = CGPathCreateMutable();
     CGPathMoveToPoint(_path, NULL, point.x, point.y);
-    _alpha = 1;
+    _alpha = .1;
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -53,7 +53,7 @@
 
     CGContextSaveGState(_bitmapContext);
     CGContextSetAlpha(_bitmapContext, _alpha);
-    CGContextSetLineWidth(_bitmapContext, 30);
+    CGContextSetLineWidth(_bitmapContext, 60);
     CGContextSetLineCap(_bitmapContext, kCGLineCapRound);
     CGContextSetStrokeColorWithColor(_bitmapContext, [UIColor colorWithRed:254/255.0 green:228/255.0 blue:214/255.0 alpha:1].CGColor);
     CGContextAddPath(_bitmapContext, _path);
