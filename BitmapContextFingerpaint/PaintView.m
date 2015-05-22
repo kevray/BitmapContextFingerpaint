@@ -36,7 +36,7 @@
     CGImageRef image = CGBitmapContextCreateImage(_bitmapContext);
     CGContextDrawImage(context, self.bounds, image);
     CGImageRelease(image);
-    _alpha *= 0.99;
+    _alpha *= 0.98;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
